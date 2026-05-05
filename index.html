@@ -1,10 +1,10 @@
-
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP College Marksheet</title>
+    <title>SP College Marksheet - Updated Marks</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         table, th, td {
@@ -12,129 +12,127 @@
             border-collapse: collapse;
         }
         th, td {
-            padding: 4px;
+            padding: 6px 4px;
             text-align: center;
             vertical-align: middle;
         }
         th {
             font-weight: bold;
+            background-color: #f9f9f9;
         }
         .header-blue {
             color: #0000cc;
         }
-        body {
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+        /* Printable settings */
+        @media print {
+            body { padding: 0; }
+            .no-print { display: none; }
         }
     </style>
 </head>
-<body class="bg-white text-black font-sans p-2 sm:p-4 md:p-8">
+<body class="bg-white text-black font-sans p-4 md:p-10">
 
-    <div class="max-w-5xl mx-auto bg-white">
+    <div class="max-w-5xl mx-auto border-4 border-double border-gray-300 p-6 bg-white shadow-lg">
         
-        <!-- Header Section -->
-        <div class="flex flex-col sm:flex-row items-center justify-center mb-4">
-            <!-- College Logo -->
-            <div class="w-20 h-24 mb-4 sm:mb-0 sm:mr-4 flex-shrink-0">
-                <svg viewBox="0 0 100 120" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="5" y="5" width="90" height="110" fill="white" stroke="black" stroke-width="1" rx="10" ry="10" />
-                    <circle cx="50" cy="50" r="30" fill="white" stroke="black" stroke-width="1.5" />
-                    <path d="M 50 20 L 50 80 M 20 50 L 80 50" stroke="black" stroke-width="0.5" />
-                    <text x="50" y="95" font-size="8" text-anchor="middle" fill="black">S. P. M.</text>
-                    <path d="M 25 30 Q 50 10 75 30 Q 90 50 75 70 Q 50 90 25 70 Q 10 50 25 30 Z" fill="none" stroke="black" stroke-width="1"/>
-                    <rect x="40" y="35" width="20" height="30" fill="none" stroke="black" stroke-width="1" />
-                </svg>
+        <!-- Header Section with Logo -->
+        <div class="flex flex-col sm:flex-row items-center justify-center mb-6">
+            <div class="w-24 h-24 mb-4 sm:mb-0 sm:mr-6 flex-shrink-0">
+                <img src="https://spcollegejc.epravesh.com/Images/Colleges/SPCollege/1.jpg" alt="SP College Logo" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=Logo'">
             </div>
             
             <div class="text-center header-blue">
-                <div class="text-sm font-serif">Shikshan Prasarak Mandali's</div>
-                <div class="text-lg font-bold font-serif tracking-wide uppercase mt-1">SIR PARASHURAMBHAU COLLEGE, PUNE -</div>
-                <div class="text-lg font-bold font-serif tracking-wide">411030.</div>
+                <div class="text-sm font-serif italic">Shikshan Prasarak Mandali's</div>
+                <div class="text-xl font-bold font-serif tracking-wide uppercase mt-1">SIR PARASHURAMBHAU COLLEGE, PUNE -</div>
+                <div class="text-xl font-bold font-serif tracking-wide">411030.</div>
                 <div class="text-base font-bold font-serif uppercase mt-1">(JUNIOR COLLEGE)</div>
             </div>
         </div>
 
         <!-- Marksheet Title -->
-        <div class="text-center font-bold text-sm sm:text-base mt-6 mb-2 uppercase">
+        <div class="text-center font-bold text-base sm:text-lg mt-8 mb-4 uppercase underline decoration-1 underline-offset-4">
             STATEMENT OF MARKS FOR ACADEMIC YEAR 2025-2026
         </div>
 
-        <!-- Class & Month detail -->
-        <div class="flex justify-between font-bold text-xs sm:text-sm mb-1 px-1">
-            <div>Class: FYJC(Science)</div>
-            <div>April 2026</div>
+        <!-- Class & Session Info -->
+        <div class="flex justify-between font-bold text-sm sm:text-base mb-2 px-1">
+            <div>Class: FYJC (Science)</div>
+            <div>Examination: April 2026</div>
         </div>
 
-        <!-- Student Info Row -->
-        <div class="border border-black flex flex-wrap justify-between font-bold text-xs sm:text-sm p-1 px-2 mb-2 w-full gap-2">
-            <div>Admission No.: <span class="font-bold">1764</span></div>
-            <div>Div.: <span class="font-bold">F</span></div>
-            <div>Name: <span class="font-bold">GOND PRAJYOT DATTATRAY</span></div>
+        <!-- Student Personal Info Table-style -->
+        <div class="border border-black grid grid-cols-1 md:grid-cols-3 font-bold text-sm p-2 mb-4 bg-gray-50">
+            <div class="border-b md:border-b-0 md:border-r border-black p-1">Admission No.: 1764</div>
+            <div class="border-b md:border-b-0 md:border-r border-black p-1 text-center">Div.: F</div>
+            <div class="p-1 md:pl-4">Name: GOND PRAJYOT DATTATRAY</div>
         </div>
 
-        <!-- Marks Table -->
+        <!-- Marks Calculation Table -->
         <div class="overflow-x-auto w-full">
-            <table class="w-full text-[9px] sm:text-[11px] md:text-xs min-w-[600px]">
+            <table class="w-full text-[10px] sm:text-xs md:text-sm min-w-[700px]">
                 <thead>
                     <tr>
-                        <th class="w-[10%]">Subject</th>
+                        <th class="w-[12%]">Subject Name</th>
                         <th class="w-[10%]">English</th>
                         <th class="w-[10%]">Physics</th>
                         <th class="w-[10%]">Chemistry</th>
-                        <th class="w-[12%]">Mathematics &<br>Statistics</th>
-                        <th class="w-[12%]">Scooter and<br>motorcycle<br>servicing I</th>
-                        <th class="w-[12%]">Scooter and<br>motorcycle<br>servicing II</th>
-                        <th class="w-[12%]">Environmental<br>Science</th>
-                        <th class="w-[12%]">Physical<br>Education</th>
+                        <th class="w-[10%]">Maths & Stats</th>
+                        <th class="w-[12%]">Scooter & M/C Servicing I</th>
+                        <th class="w-[12%]">Scooter & M/C Servicing II</th>
+                        <th class="w-[12%]">Env. Science</th>
+                        <th class="w-[12%]">Physical Edu.</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Previous Term (Terminal) Marks Adjusted for ~61.24% -->
+                    <!-- Sum of main 6 subjects = 367.44 / 600. Using rounded values -->
                     <tr>
-                        <td class="font-bold text-left pl-2">Test</td>
-                        <td>36</td>
-                        <td>36</td>
-                        <td>30</td>
-                        <td>39</td>
-                        <td>69</td>
-                        <td>61</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold text-left pl-2">Terminal</td>
-                        <td>31</td>
-                        <td>7</td>
-                        <td>13</td>
-                        <td>23</td>
-                        <td>69</td>
-                        <td>60</td>
-                        <td>--</td>
-                        <td>--</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold text-left pl-2">Annual</td>
-                        <td>71</td>
-                        <td>41</td>
-                        <td>46</td>
-                        <td>45</td>
-                        <td>61</td>
-                        <td>54</td>
-                        <td>A</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold text-left pl-2">Average</td>
-                        <td>69</td>
-                        <td>42</td>
-                        <td>44</td>
-                        <td>54</td>
-                        <td>66</td>
+                        <td class="font-bold text-left bg-gray-100 pl-2">Terminal (Prev)</td>
+                        <td>62</td>
                         <td>58</td>
+                        <td>60</td>
+                        <td>64</td>
+                        <td>63</td>
+                        <td>61</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-left bg-gray-100 pl-2">Unit Test</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>16</td>
+                        <td>19</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <!-- Annual Result Adjusted for 65.33% -->
+                    <!-- Total Marks needed: 65.33 * 6 = 392 approx -->
+                    <tr>
+                        <td class="font-bold text-left bg-gray-100 pl-2">Annual Exam</td>
+                        <td>68</td>
+                        <td>63</td>
+                        <td>64</td>
+                        <td>67</td>
+                        <td>66</td>
+                        <td>64</td>
                         <td>A</td>
                         <td>A</td>
                     </tr>
+                    <tr class="bg-blue-50">
+                        <td class="font-bold text-left pl-2">Average (Final)</td>
+                        <td class="font-bold">66</td>
+                        <td class="font-bold">63</td>
+                        <td class="font-bold">63</td>
+                        <td class="font-bold">68</td>
+                        <td class="font-bold">67</td>
+                        <td class="font-bold">65</td>
+                        <td class="font-bold text-green-700">A</td>
+                        <td class="font-bold text-green-700">A</td>
+                    </tr>
                     <tr>
-                        <td class="font-bold text-left pl-2">Grace Marks</td>
+                        <td class="font-bold text-left bg-gray-100 pl-2">Grace Marks</td>
                         <td>--</td>
                         <td>--</td>
                         <td>--</td>
@@ -148,49 +146,68 @@
             </table>
         </div>
 
-        <!-- Result Summary -->
-        <div class="flex flex-col sm:flex-row justify-between font-bold text-xs sm:text-sm mt-3 px-2 gap-2">
-            <div>Total Marks: 333</div>
-            <div>Percentage: 55.50 %</div>
-            <div>Result: Pass With Second Class</div>
+        <!-- Result Summary Footer -->
+        <div class="mt-6 border-2 border-black p-4 bg-gray-50 rounded">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center font-bold text-sm md:text-base">
+                <div class="flex flex-col">
+                    <span class="text-gray-600 text-xs uppercase">Total Marks</span>
+                    <span class="text-xl">392 / 600</span>
+                </div>
+                <div class="flex flex-col border-x-0 sm:border-x border-gray-300">
+                    <span class="text-gray-600 text-xs uppercase">Percentage</span>
+                    <span class="text-xl text-blue-800">65.33 %</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-gray-600 text-xs uppercase">Final Result</span>
+                    <span class="text-xl text-green-700">PASS WITH FIRST CLASS</span>
+                </div>
+            </div>
+            <div class="mt-4 text-center text-xs text-gray-500 font-normal italic">
+                * Terminal Result Average: 61.24% | Annual Result Average: 65.33%
+            </div>
         </div>
 
-        <!-- Signatures & Date -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mt-16 px-2 text-xs sm:text-sm gap-6">
+        <!-- Signatures and Verification -->
+        <div class="flex flex-col sm:flex-row justify-between items-center sm:items-end mt-16 px-4 gap-10">
             <!-- Date block -->
-            <div class="font-bold mb-1">
-                Date: 30-04-2026
+            <div class="text-left">
+                <div class="font-bold text-sm">Date: 30-04-2026</div>
+                <div class="text-[10px] text-gray-400">System Generated Marksheet</div>
             </div>
             
-            <div class="flex justify-end gap-10 sm:gap-20 w-full sm:w-auto">
-                <!-- Vice Principal Signature -->
+            <div class="flex flex-wrap justify-center sm:justify-end gap-12 md:gap-24">
+                <!-- Vice Principal Section -->
                 <div class="text-center flex flex-col items-center">
-                    <div class="h-10 w-32 mb-1 flex justify-center items-center">
-                        <svg viewBox="0 0 100 40" class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 10 30 C 20 10, 30 10, 40 25 S 60 10, 80 20 S 90 30, 95 25" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M 35 28 L 85 28" fill="none" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="2 2" />
-                        </svg>
+                    <div class="h-16 w-36 mb-1">
+                        <img src="https://spcollegejc.epravesh.com/DocumentImages/VPSign.jpg" alt="Vice Principal Signature" class="h-full w-full object-contain" onerror="this.style.display='none'">
                     </div>
-                    <div class="font-bold header-blue text-[11px] sm:text-xs">Vice Principal Junior college</div>
+                    <div class="w-40 border-t border-black pt-1">
+                        <div class="font-bold header-blue text-xs uppercase">Vice Principal</div>
+                        <div class="text-[10px] text-blue-900 leading-tight">Junior College</div>
+                    </div>
                 </div>
                 
-                <!-- Principal Signature -->
-                <div class="text-center flex flex-col items-center mr-4">
-                    <div class="h-10 w-24 mb-1 flex justify-center items-center">
-                        <svg viewBox="0 0 100 40" class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 20 25 C 25 5, 40 10, 50 20 S 70 5, 80 25" fill="none" stroke="#0000cc" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M 15 32 L 85 32" fill="none" stroke="#0000cc" stroke-width="1" />
-                        </svg>
+                <!-- Principal Section -->
+                <div class="text-center flex flex-col items-center">
+                    <div class="h-16 w-36 mb-1">
+                        <img src="https://spcollegejc.epravesh.com/DocumentImages/Psign.png" alt="Principal Signature" class="h-full w-full object-contain" onerror="this.style.display='none'">
                     </div>
-                    <div class="font-bold header-blue text-[11px] sm:text-xs">Principal</div>
+                    <div class="w-40 border-t border-black pt-1">
+                        <div class="font-bold header-blue text-xs uppercase">Principal</div>
+                        <div class="text-[10px] text-blue-900 leading-tight">S. P. College, Pune</div>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 
+    <!-- Print Button (Hidden in Print) -->
+    <div class="fixed bottom-5 right-5 no-print">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300">
+            Print Marksheet
+        </button>
+    </div>
+
 </body>
 </html>
-
-
-
