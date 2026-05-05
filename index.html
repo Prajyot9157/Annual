@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP College Marksheet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 4px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            font-weight: bold;
+        }
+        .header-blue {
+            color: #0000cc;
+        }
+        body {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+<body class="bg-white text-black font-sans p-2 sm:p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white">
+        
+        <!-- Header Section -->
+        <div class="flex flex-col sm:flex-row items-center justify-center mb-4">
+            <!-- College Logo -->
+            <div class="w-20 h-24 mb-4 sm:mb-0 sm:mr-4 flex-shrink-0">
+                <svg viewBox="0 0 100 120" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="5" width="90" height="110" fill="white" stroke="black" stroke-width="1" rx="10" ry="10" />
+                    <circle cx="50" cy="50" r="30" fill="white" stroke="black" stroke-width="1.5" />
+                    <path d="M 50 20 L 50 80 M 20 50 L 80 50" stroke="black" stroke-width="0.5" />
+                    <text x="50" y="95" font-size="8" text-anchor="middle" fill="black">S. P. M.</text>
+                    <path d="M 25 30 Q 50 10 75 30 Q 90 50 75 70 Q 50 90 25 70 Q 10 50 25 30 Z" fill="none" stroke="black" stroke-width="1"/>
+                    <rect x="40" y="35" width="20" height="30" fill="none" stroke="black" stroke-width="1" />
+                </svg>
+            </div>
+            
+            <div class="text-center header-blue">
+                <div class="text-sm font-serif">Shikshan Prasarak Mandali's</div>
+                <div class="text-lg font-bold font-serif tracking-wide uppercase mt-1">SIR PARASHURAMBHAU COLLEGE, PUNE -</div>
+                <div class="text-lg font-bold font-serif tracking-wide">411030.</div>
+                <div class="text-base font-bold font-serif uppercase mt-1">(JUNIOR COLLEGE)</div>
+            </div>
+        </div>
+
+        <!-- Marksheet Title -->
+        <div class="text-center font-bold text-sm sm:text-base mt-6 mb-2 uppercase">
+            STATEMENT OF MARKS FOR ACADEMIC YEAR 2025-2026
+        </div>
+
+        <!-- Class & Month detail -->
+        <div class="flex justify-between font-bold text-xs sm:text-sm mb-1 px-1">
+            <div>Class: FYJC(Science)</div>
+            <div>April 2026</div>
+        </div>
+
+        <!-- Student Info Row -->
+        <div class="border border-black flex flex-wrap justify-between font-bold text-xs sm:text-sm p-1 px-2 mb-2 w-full gap-2">
+            <div>Admission No.: <span class="font-bold">1764</span></div>
+            <div>Div.: <span class="font-bold">F</span></div>
+            <div>Name: <span class="font-bold">GOND PRAJYOT DATTATRAY</span></div>
+        </div>
+
+        <!-- Marks Table -->
+        <div class="overflow-x-auto w-full">
+            <table class="w-full text-[9px] sm:text-[11px] md:text-xs min-w-[600px]">
+                <thead>
+                    <tr>
+                        <th class="w-[10%]">Subject</th>
+                        <th class="w-[10%]">English</th>
+                        <th class="w-[10%]">Physics</th>
+                        <th class="w-[10%]">Chemistry</th>
+                        <th class="w-[12%]">Mathematics &<br>Statistics</th>
+                        <th class="w-[12%]">Scooter and<br>motorcycle<br>servicing I</th>
+                        <th class="w-[12%]">Scooter and<br>motorcycle<br>servicing II</th>
+                        <th class="w-[12%]">Environmental<br>Science</th>
+                        <th class="w-[12%]">Physical<br>Education</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-bold text-left pl-2">Test</td>
+                        <td>36</td>
+                        <td>36</td>
+                        <td>30</td>
+                        <td>39</td>
+                        <td>69</td>
+                        <td>61</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-left pl-2">Terminal</td>
+                        <td>31</td>
+                        <td>7</td>
+                        <td>13</td>
+                        <td>23</td>
+                        <td>69</td>
+                        <td>60</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-left pl-2">Annual</td>
+                        <td>71</td>
+                        <td>41</td>
+                        <td>46</td>
+                        <td>45</td>
+                        <td>61</td>
+                        <td>54</td>
+                        <td>A</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-left pl-2">Average</td>
+                        <td>69</td>
+                        <td>42</td>
+                        <td>44</td>
+                        <td>54</td>
+                        <td>66</td>
+                        <td>58</td>
+                        <td>A</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-left pl-2">Grace Marks</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Result Summary -->
+        <div class="flex flex-col sm:flex-row justify-between font-bold text-xs sm:text-sm mt-3 px-2 gap-2">
+            <div>Total Marks: 333</div>
+            <div>Percentage: 55.50 %</div>
+            <div>Result: Pass With Second Class</div>
+        </div>
+
+        <!-- Signatures & Date -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mt-16 px-2 text-xs sm:text-sm gap-6">
+            <!-- Date block -->
+            <div class="font-bold mb-1">
+                Date: 30-04-2026
+            </div>
+            
+            <div class="flex justify-end gap-10 sm:gap-20 w-full sm:w-auto">
+                <!-- Vice Principal Signature -->
+                <div class="text-center flex flex-col items-center">
+                    <div class="h-10 w-32 mb-1 flex justify-center items-center">
+                        <svg viewBox="0 0 100 40" class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 10 30 C 20 10, 30 10, 40 25 S 60 10, 80 20 S 90 30, 95 25" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M 35 28 L 85 28" fill="none" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="2 2" />
+                        </svg>
+                    </div>
+                    <div class="font-bold header-blue text-[11px] sm:text-xs">Vice Principal Junior college</div>
+                </div>
+                
+                <!-- Principal Signature -->
+                <div class="text-center flex flex-col items-center mr-4">
+                    <div class="h-10 w-24 mb-1 flex justify-center items-center">
+                        <svg viewBox="0 0 100 40" class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 20 25 C 25 5, 40 10, 50 20 S 70 5, 80 25" fill="none" stroke="#0000cc" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 15 32 L 85 32" fill="none" stroke="#0000cc" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div class="font-bold header-blue text-[11px] sm:text-xs">Principal</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
